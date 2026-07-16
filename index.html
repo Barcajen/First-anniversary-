@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy 1st Anniversary ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Georgia,serif;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+min-height:100vh;
+display:flex;
+justify-content:center;
+padding:30px 15px;
+overflow-x:hidden;
+color:white;
+}
+
+.card{
+width:100%;
+max-width:500px;
+background:rgba(255,255,255,.25);
+backdrop-filter:blur(12px);
+padding:30px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+animation:fadeIn 1.5s;
+}
+
+h1{
+font-size:40px;
+margin-bottom:20px;
+}
+
+h2{
+margin-top:25px;
+font-size:32px;
+}
+
+p{
+font-size:20px;
+line-height:1.8;
+margin-top:15px;
+}
+
+button{
+margin-top:25px;
+padding:15px 35px;
+border:none;
+border-radius:40px;
+font-size:22px;
+background:#ff4d6d;
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+#message{
+display:none;
+animation:fadeIn 2s;
+}
+
+.heart{
+position:fixed;
+bottom:-30px;
+font-size:25px;
+animation:float linear forwards;
+pointer-events:none;
+}
+
+@keyframes float{
+from{
+transform:translateY(0);
+opacity:1;
+}
+to{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Happy 1st Anniversary ❤️</h1>
+
+<p>
+For my favorite person, even though we are miles apart,
+you are always close to my heart.
+</p>
+
+<button onclick="showLove()">Click Me ❤️</button>
+
+<div id="message">
+
+<h2>Thank You For Everything, My Love 💕</h2>
+
+<p>
+Thank you for your love, patience, for staying with me through everything.
+Thank you for every smile, every call, every laugh, and every memory we've created together.
+</p>
+
+<p>
+Distance may separate us, but it can never weaken my love for you.
+Every day I fall in love with you even more.
+I can't wait for the day I finally get to hug you again.
+</p>
+
+<h2>I Love You Forever ❤️</h2>
+
+<p>
+Happy 1st Anniversary, my love.
+You are my happiness, my peace, and my forever.
+No matter how far we are, my heart will always belong to you.
+❤️❤️❤️
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function showLove(){
+
+document.getElementById("message").style.display="block";
+
+for(let i=0;i<50;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(18+Math.random()*25)+"px";
+
+heart.style.animationDuration=(3+Math.random()*3)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
